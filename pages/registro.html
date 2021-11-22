@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/stylesRegistro.css">
+    <link rel="stylesheet" href="/styles/stylesIndex.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="/img/Academia-geek-logo-blanco-300x211.png" alt="logo Academia Geek">
+        </div>
+        <na class="enlaces">
+            <a href="/index.html">Inicio</a>
+            <a href="/pages/registro.html">Registro</a>
+        </na>
+    </header>
+    <form id="formulario">
+        <h4>Formulario de registro</h4>
+        <div class="datoIngreso">
+            <label>Nombre:</label>
+            <input id="inputNombre" class="ingresoUsuario" type="text">
+        </div>
+        <div class="datoIngreso">
+            <label>Apellido:</label>
+            <input id="inputApellido" class="ingresoUsuario" type="text">
+        </div>
+        <div class="datoIngreso">
+            <label>Teléfono:</label>
+            <input id="inputTel" class="ingresoUsuario">
+        </div>
+        <div class="datoIngreso">
+            <label>Dirección:</label>
+            <input id="inputDir" class="ingresoUsuario" type="text">
+        </div>
+        <div class="datoIngreso" id="observaciones">
+            <label>Observaciones: <span>(Campo no obligatorio)</span></label>
+            <input id="ingresoObservaciones">
+        </div>
+        <div>
+            <input id="btn" value="Enviar" type="button">
+        </div>
+    </form>
+    <script src="/script/scripRegistro.js"></script>
+</body>
+
+</html>
