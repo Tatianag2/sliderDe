@@ -97,16 +97,9 @@ anterior.addEventListener('click', function(){
                         fragment.appendChild(div);
                         infoPeli.appendChild(fragment);
                     }
-
-                    
                 })
             })
-        
         }
-        
         obtenerPosicion();
-
     })
-    
-
 })
