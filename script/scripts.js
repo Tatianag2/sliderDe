@@ -36,10 +36,10 @@ function mostrarS(){
 //desplazamiento del slider hacia la izquierda
 function mostrarA(){
     let sliderLast = sliderItem[sliderItem.length - 1];
-    slider.style.marginLeft = "0%";
+    slider.style.marginLeft = "100%";
     function cambio(){
         slider.insertAdjacentElement('afterbegin', sliderLast);
-        slider.style.marginLeft = "-100%";
+        slider.style.marginLeft = "0%";
     }
     cambio();
 }
@@ -82,21 +82,21 @@ anterior.addEventListener('click', function(){
                     let i = item.value;
                     
                     let infoPeli = document.getElementById("infoPeli");//el div creado para las tarjetas con la informacion de las pelicula
-                    //condicional ya que la posicion en un arreglo empieza en 0, pero la posicion empieza en 1 por lo que la ultima posicion quedaria vacia
-                    if(i===(data.length-1)){
-                        let div = document.createElement("div");
-                        div.innerHTML = `<p>${data[i-1].nombre}<br>Año de estreno: ${data[i-1].anio}<br>Recaudación: ${data[i-1].recaudacion}<br>Producida por: ${data[i-1].productora}</p>`;
-                        div.id = "infoPeliItem";
-                        fragment.appendChild(div);
-                        infoPeli.appendChild(fragment);
-                        
-                    } else {
-                        let div = document.createElement("div");
-                        div.innerHTML = `<p>${data[i-1].nombre}<br>Año de estreno: ${data[i-1].anio}<br>Recaudación: ${data[i-1].recaudacion}<br>Producida por: ${data[i-1].productora}</p>`;
-                        div.id = "infoPeliItem";
-                        fragment.appendChild(div);
-                        infoPeli.appendChild(fragment);
-                    }
+                    
+                    let div = document.createElement("div");
+                    div.innerHTML = `<p><input type="button" value="x" id="cerrar">${data[i-1].nombre}<br>Año de estreno: ${data[i-1].anio}<br>Recaudación: ${data[i-1].recaudacion}<br>Producida por: ${data[i-1].productora}</p>`;
+                    div.id = "infoPeliItem";
+                    fragment.appendChild(div);
+                    infoPeli.appendChild(fragment);
+
+                    document.getElementById("cerrar").addEventListener('click', function(){
+                        [...document.querySelectorAll('.valorPosicion')].forEach(function(item){
+                            let infoPeliItem = document.getElementById("infoPeliItem");
+                            item.setAttribute("value", "");
+                            infoPeliItem.remove();      
+                        })
+                    })
+                    
                 })
             })
         }
