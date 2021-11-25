@@ -211,6 +211,10 @@ i{
         height: 350px;
     }
 
+    #slider a{
+        word-spacing: normal;
+    }
+
     .sliderItem{
         height: 300px;
         margin-left: 0px;
