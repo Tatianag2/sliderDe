@@ -181,25 +181,30 @@ i{
 }
 
 @media (max-width: 500px){
+
+    *{
+        overflow-x: hidden;
+    }
+
     i{
         color: rgb(156, 146, 146);
-        font-size: 50px;
+        font-size: 45px;
+        margin-top: 18px;
         position: absolute;
     }
 
     #slider img{
         border: 0.5px solid black;
-        height: 300px;
-        margin-bottom: 20px;
+        height: 200px;
         width: 300px;
     }
 
     #slider{
-        height: 400px;
+        height: 300px;
     }
 
     .sliderItem{
-        height: 200px;
+        height: 250px;
         margin-left: 55px;
         margin-right: 55px;
     }
